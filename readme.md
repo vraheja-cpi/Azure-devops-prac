@@ -16,7 +16,7 @@ Run com.in28minutes.microservices.currencyconversionservice.CurrencyConversionSe
 }
 ```
 
-## H2 Console
+## H2 Console-Test
 
 - http://localhost:8000/h2-console
 - Use `jdbc:h2:mem:testdb` as JDBC URL
