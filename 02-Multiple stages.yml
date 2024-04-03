@@ -17,8 +17,8 @@ stages:
       - bash: echo Build stage
     - job: job2 
       steps:
-        - bash: echo second job
-  - stage: Dev Deploy
+        - bash: echo second Build job
+  - stage: DevDeploy
     jobs:
     - job: DevDeployJob
       steps: 
@@ -26,12 +26,12 @@ stages:
     - job: Dev2Job 
       steps:
         - bash: echo second Devjob
-  - stage: QA Job
+  - stage: QAJob
     jobs:
-    - job: QA First Job
+    - job: QAFirstJob
       steps: 
       - bash: echo QA First stage
-    - job: QA Job2 
+    - job: QAJob2 
       steps:
         - bash: echo second QA job            
 
