@@ -21,6 +21,14 @@ stages:
         - bash: echo $(Build.BuildNumber)
         - bash: echo $(Build.BuildId)
         - bash: ls -R $(System.DefaultWorkingDirectory)
+        - bash: echo $(Build.ArtifactStagingDirectory)
+        - bash: java -version
+        - bash: python --version
+        - task: CopyFiles@2
+          inputs:
+            SourceFolder: '$(System.DefaultWorkingDirectory)'
+            Contents: '**/*.yaml'
+            TargetFolder: '$(Build.ArtifactStagingDirectory)'
   # - stage: DevDeploy
   #   dependsOn: Build
   #   jobs:
